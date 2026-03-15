@@ -16,10 +16,10 @@ SAMPLE_ID = "b008ae91-32cf-4d7d-84e4-996144e4edb7"
 
 # Параметр метода Сингха.
 # Можно менять для разных изображений
-SINGH_K = 0.05
+SINGH_K = 0.15
 
 # Размер окна по заданию
-WINDOW_SIZE = 3
+WINDOW_SIZE = 25
 
 # Лимит для скачивания (None - нет лимита)
 LIMIT = 3
@@ -175,7 +175,7 @@ def process_one_image(img_path: Path, k: float = 0.25) -> None:
 
     # 2. Бинаризация Сингха
     binary = singh_binarization(gray, k=SINGH_K, window_size=WINDOW_SIZE)
-    bin_path = BIN_DIR / f"{stem}_binary_singh_3x3.bmp"
+    bin_path = BIN_DIR / f"{stem}_binary_singh.bmp"
     save_binary_bmp(binary, bin_path)
 
     print(f"[OK] Обработано: {img_path.name}")

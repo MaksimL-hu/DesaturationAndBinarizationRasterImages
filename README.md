@@ -58,15 +58,23 @@ Y = 0.299R + 0.587G + 0.114B
 SINGH_K = 0.05
 WINDOW_SIZE = 3
 ```
-Параметр метода Сингха (SINGH_K), влияющий на вычисление локального порога, подбирается экспериментально. В данной работе используется значение 0.05.
+
+Для бинаризации используется адаптивная бинаризация Сингха с окном 25×25.
+
+```bash
+SINGH_K = 0.15
+WINDOW_SIZE = 25
+```
+Параметр метода Сингха (SINGH_K), влияющий на вычисление локального порога, подбирается экспериментально. В данной работе используется значение 0.05 для 3x3 и 0.15 для 25×25.
 
 
-Размер локального окна (WINDOW_SIZE), по которому вычисляется среднее значение яркости.
-По условию задания используется окно 3×3.
-
-| Бинаризация изображения 1 | Бинаризация изображения 2 | Бинаризация изображения 3 |
+| Бинаризация изображения 1_3×3 | Бинаризация изображения 2_3×3 | Бинаризация изображения 3_3×3 |
 |---|---|---|
-| ![Input 1](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp/img_001_binary_singh_3x3.bmp) | ![Input 2](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp/img_002_binary_singh_3x3.bmp) | ![Input 3](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp/img_003_binary_singh_3x3.bmp) |
+| ![Input 1](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp_3x3/img_001_binary_singh_3x3.bmp) | ![Input 2](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp_3x3/img_002_binary_singh_3x3.bmp) | ![Input 3](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp_3x3/img_003_binary_singh_3x3.bmp) |
+
+| Бинаризация изображения 1_25×25 | Бинаризация изображения 2_25×25 | Бинаризация изображения 3_25×25 |
+|---|---|---|
+| ![Input 1](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp_25x25/img_001_binary_singh_25x25.bmp) | ![Input 2](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp_25x25/img_002_binary_singh_25x25.bmp) | ![Input 3](./DesaturationAndBinarizationRasterImages/lab2_output/binary_bmp_25x25/img_003_binary_singh_25x25.bmp) |
 
 ---
 
